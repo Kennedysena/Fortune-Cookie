@@ -16,23 +16,23 @@ btnTry.addEventListener("click", buttonReset);
 document.addEventListener("keydown", pressEnterKey);
 
 function generatePhrase() {
-  toggleScream();
+  toggleScreen();
   generateRandomPhrase = Math.floor(Math.random() * phrases.length);
   randomPhrase.innerHTML = phrases[generateRandomPhrase];
 }
 
-function toggleScream() {
+function toggleScreen() {
   screen1.classList.toggle("hide");
   screen2.classList.toggle("hide");
 }
 
 function buttonReset(event) {
   event.preventDefault();
-  toggleScream();
+  toggleScreen();
 }
 
 function pressEnterKey(event) {
-  if (event.key == "Enter" && screen1.classList.contains("hide")) {
-    toggleScream();
+  if (event.key == "Enter") {
+    generatePhrase();
   }
 }
