@@ -6,12 +6,13 @@ const phrases = [
   "Se o passado te ligar não atenda, ele não tem nada de novo a oferecer",
   "Você não é especial",
   "Pelo que estou sofrendo ?",
-  "O caminho da felicidade é cheio de obstáculos e humilhações"
+  "O caminho da felicidade é cheio de obstáculos e humilhações",
 ];
 let randomPhrase = document.querySelector("#randomPhrase");
 let generateRandomPhrase;
 
 clickOnCookie.addEventListener("click", generatePhrase);
+btnTry.addEventListener("click", buttonReset);
 document.addEventListener("keydown", pressEnterKey);
 
 function generatePhrase() {
@@ -23,6 +24,11 @@ function generatePhrase() {
 function toggleScream() {
   screen1.classList.toggle("hide");
   screen2.classList.toggle("hide");
+}
+
+function buttonReset(event) {
+  event.preventDefault();
+  toggleScream();
 }
 
 function pressEnterKey(event) {
